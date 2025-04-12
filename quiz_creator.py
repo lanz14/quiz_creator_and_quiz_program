@@ -1,9 +1,18 @@
 # Create a program that ask user for a question, it will also ask for 4 possible answer (a,b,c,d) and the correct answer. Write the collected data to a text file. Ask another question until the user chose to exit.
 
+import random
+import time
+
 # Program title
 print("\n" + "-" * 50)
 print(">>> QUIZ CREATOR <<<".center(50))
 print("-" * 50)
+
+# Welcome messages
+welcome_messages = ["Let them suffer... hehe", "Challenge them!", "Welcome!",]
+
+print(random.choice(welcome_messages).center(50))
+time.sleep(1)
 
 # Empty quiz list
 quiz = []
