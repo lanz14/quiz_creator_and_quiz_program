@@ -10,5 +10,11 @@ while True:
         break
 
 # Get the user's choices (a,b,c,d)
+    print("Input the four possible answers:")
+    choice_a = input("A: ")
+    choice_b = input("B: ")
+    choice_c = input("C: ")
+    choice_d = input("D: ")
+
 # Ask the user what is the correct answer
 # Save the questions to a text file
