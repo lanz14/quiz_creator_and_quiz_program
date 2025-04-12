@@ -39,6 +39,7 @@ while True:
 
 # Save the questions to a text file
 if quiz:
+    
     # Get filename
     filename = input("\nName your quiz file (press Enter for 'my_quiz.txt'): ")
     if not filename:
@@ -46,7 +47,6 @@ if quiz:
     if not filename.endswith('.txt'):
         filename += '.txt'
         
-    # Write to file with explicit UTF-8 encoding
     with open(filename, 'w') as file:
         
         for i, q in enumerate(quiz, 1):
@@ -57,8 +57,8 @@ if quiz:
             file.write(f"D. {q['d']}\n")
             file.write(f"Answer: {q['correct'].upper()}\n\n")
     
-    # Success message with stats
     print(f"\nYour {len(quiz)} questions saved to '{filename}'")
     print("Your quiz is ready!")
+
 else:
     print("No questions created...")
