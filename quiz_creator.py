@@ -33,4 +33,8 @@ while True:
         'correct': correct.lower()
     })
 
+    # Confirmation message
+    confirmation = "Done!"
+    print(confirmation)
+
 # Save the questions to a text file
