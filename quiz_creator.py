@@ -17,4 +17,10 @@ while True:
     choice_d = input("D: ")
 
 # Ask the user what is the correct answer
+    correct = ""
+    while correct not in ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D']:
+        correct = input("Which is correct? (A/B/C/D): ")
+        if correct not in ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D']:
+            print("Please enter A, B, C, or D.")
+
 # Save the questions to a text file
