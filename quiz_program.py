@@ -1,6 +1,7 @@
 # Create the Quiz program that read the output file of the Quiz Creator. The user will answer the randomly selected question and check if the answer is correct.
 
 import os
+import random
 
 # User's input of the text file name to read the file
 filename = input("\nEnter the quiz file name: ")
@@ -59,6 +60,9 @@ if not questions:
     print("No questions loaded. Exiting program.")
 else:
     print(f"\nLoaded {len(questions)} questions from '{filename}'")
+
+    selected_questions = questions.copy()
+    random.shuffle(selected_questions)
 
 # Get the user's answers
 # Check if correct
