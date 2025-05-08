@@ -121,3 +121,9 @@ else:
             print("You should study, LOL!")
     
     print("-" * 50)
+
+    retake = input("\nWould you like to take another quiz? (y/n): ").lower()
+    if retake in ['y', 'yes']:
+        print("\nPlease restart the program to take another quiz.")
+    else:
+        print("\nBye!")
