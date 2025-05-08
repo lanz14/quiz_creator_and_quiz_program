@@ -16,7 +16,19 @@ questions = []
 if not os.path.exists(filename):
     print(f"Error: File '{filename}' not found.")
 else:
-    pass
+    with open(filename, 'r') as file:
+        content = file.read().split("\n\n")
+        
+    for block in content:
+        if not block.strip():
+            continue
+            
+        lines = block.strip().split('\n')
+        if len(lines) < 6:
+            continue
+            
+        # Extract the question text
+        question_text = lines[0].split(": ", 1)[1] if ": " in lines[0] else lines[0]
 
 # Displaying the questions and choices to the user
 # Get the user's answers
