@@ -44,6 +44,16 @@ else:
         if "Answer: " in answer_line:
             correct_answer = answer_line.split("Answer: ")[1].lower()
 
+            # Add question to the list
+            questions.append({
+                'question': question_text,
+                'a': choices.get('a', ''),
+                'b': choices.get('b', ''),
+                'c': choices.get('c', ''),
+                'd': choices.get('d', ''),
+                'correct': correct_answer
+            })
+
 # Displaying the questions and choices to the user
 # Get the user's answers
 # Check if correct
