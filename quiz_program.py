@@ -30,6 +30,15 @@ else:
         # Extract the question text
         question_text = lines[0].split(": ", 1)[1] if ": " in lines[0] else lines[0]
 
+        # Extract the choices
+        choices = {}
+        for number in range(1, 5):
+            if number < len(lines):
+                parts = lines[number].split(". ", 1)
+                if len(parts) == 2:
+                    option_letter, option_text = parts[0].lower(), parts[1]
+                    choices[option_letter] = option_text
+
 # Displaying the questions and choices to the user
 # Get the user's answers
 # Check if correct
