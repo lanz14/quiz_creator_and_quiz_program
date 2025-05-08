@@ -55,6 +55,11 @@ else:
             })
 
 # Displaying the questions and choices to the user
+if not questions:
+    print("No questions loaded. Exiting program.")
+else:
+    print(f"\nLoaded {len(questions)} questions from '{filename}'")
+
 # Get the user's answers
 # Check if correct
 # Display the results of the quiz
