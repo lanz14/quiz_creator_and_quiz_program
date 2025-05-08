@@ -81,5 +81,19 @@ else:
         print(f"D. {question['d']}")
 
 # Get the user's answers
+        answer = ""
+        while answer not in ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D', 'q', 'Q']:
+            answer = input("\nYour answer (A/B/C/D) or 'Q' to quit: ")
+            
+            if answer.lower() == 'q':
+                print("\nQuiz terminated.")
+                break
+                
+            if answer not in ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D']:
+                print("Please enter A, B, C, D, or Q.")
+        
+        if answer.lower() == 'q':
+            break
+
 # Check if correct
 # Display the results of the quiz
