@@ -39,6 +39,11 @@ else:
                     option_letter, option_text = parts[0].lower(), parts[1]
                     choices[option_letter] = option_text
 
+        # Extract the answers
+        answer_line = lines[5] if len(lines) > 5 else ""
+        if "Answer: " in answer_line:
+            correct_answer = answer_line.split("Answer: ")[1].lower()
+
 # Displaying the questions and choices to the user
 # Get the user's answers
 # Check if correct
