@@ -96,4 +96,12 @@ else:
             break
 
 # Check if correct
+        if answer.lower() == question['correct'].lower():
+            print("\n✓ Correct!")
+            score += 1
+        else:
+            print(f"\n✗ Wrong! The correct answer is {question['correct'].upper()}.")
+        
+        time.sleep(1)
+
 # Display the results of the quiz
