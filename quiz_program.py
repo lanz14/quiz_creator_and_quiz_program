@@ -105,3 +105,19 @@ else:
         time.sleep(1)
 
 # Display the results of the quiz
+    if question_count > 0:
+        print("\n" + "-" * 50)
+        print(f"Your score: {score}/{question_count}")
+        percentage = (score / question_count) * 100
+        print(f"Percentage: {percentage:.1f}%")
+        
+        if percentage >= 90:
+            print("Excellent work!")
+        elif percentage >= 70:
+            print("Good job!")
+        elif percentage >= 50:
+            print("Not bad, though!")
+        else:
+            print("You should study, LOL!")
+    
+    print("-" * 50)
