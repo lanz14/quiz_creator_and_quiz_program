@@ -2,6 +2,7 @@
 
 import os
 import random
+import time
 
 # User's input of the text file name to read the file
 filename = input("\nEnter the quiz file name: ")
@@ -63,6 +64,21 @@ else:
 
     selected_questions = questions.copy()
     random.shuffle(selected_questions)
+
+    print("\nStarting quiz...")
+    time.sleep(1)
+    
+    score = 0
+    question_count = 0
+    
+    for question in selected_questions:
+        question_count += 1
+        
+        print(f"\nQuestion {question_count}: {question['question']}")
+        print(f"A. {question['a']}")
+        print(f"B. {question['b']}")
+        print(f"C. {question['c']}")
+        print(f"D. {question['d']}")
 
 # Get the user's answers
 # Check if correct
