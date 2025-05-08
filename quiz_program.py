@@ -4,6 +4,15 @@ import os
 import random
 import time
 
+print("\n" + "-" * 50)
+print(">>> QUIZ PROGRAM <<<".center(50))
+print("-" * 50)
+
+welcome_message = "Test your knowledge!"
+print(welcome_message.center(50))
+print("-" * 50)
+time.sleep(1)
+
 # User's input of the text file name to read the file
 filename = input("\nEnter the quiz file name: ")
 if not filename.endswith('.txt'):
